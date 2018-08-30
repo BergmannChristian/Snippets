@@ -31,7 +31,7 @@ namespace The_Pig_Latinizer
             }
 
             //Result Display
-            Console.WriteLine("Your name in Pig Latin: {0}", modifiedName);
+            Console.WriteLine("\nYour name in Pig Latin: {0}", modifiedName);
             Console.ReadLine();
 
             ///End Pig Latinizer
