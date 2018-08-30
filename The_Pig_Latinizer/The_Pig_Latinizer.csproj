@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{79CDF49B-9E87-4972-9F62-FEC45175D3C0}</ProjectGuid>
+    <ProjectGuid>{27EE40BC-9092-43BA-AAAB-582502505138}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Method_Madness</RootNamespace>
-    <AssemblyName>Method_Madness</AssemblyName>
+    <RootNamespace>The_Pig_Latinizer</RootNamespace>
+    <AssemblyName>The_Pig_Latinizer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="The_Pig_Latinizer.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
