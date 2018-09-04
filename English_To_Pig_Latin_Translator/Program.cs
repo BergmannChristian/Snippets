@@ -10,59 +10,19 @@ namespace English_To_Pig_Latin_Translator
     {
         static void Main(string[] args)
         {
-         
-            List<string> translatedWords = new List<string>();
+            string userInput = "a fantastic sentence a truly wonderful statement";
 
-            bool firstRun = true;
-            int indexTracker = 0;
+            string[] separatedInput = userInput.Split(' ');
+            string modifiedSentence = "";
 
-            string targetWord, modifiedWord;
-
-            int firstPoint = 0;
-            int secondPoint = 0;
-
-            string userInput = "Love is like an hourglass with the heart filling up as the brain empties".ToLower();
-            Console.WriteLine(userInput + "\n");
-
-            foreach (char endPoint in userInput)
+            foreach (string word in separatedInput)
             {
-
-                //Determine location of the first whitespace in the string. Assign the value of the indexTracker + one to the firstPoint variable.
-                if (endPoint == ' ' && firstRun == true)
-                {
-                    targetWord = userInput.Substring(0, indexTracker);
-                    firstPoint = indexTracker + 1;
-                    modifiedWord = Translator(targetWord);
-
-                    translatedWords.Add(modifiedWord + " ");
-                    firstRun = false;
-                }
-                else if (endPoint == ' ')
-                {
-                    secondPoint = indexTracker - firstPoint;
-                    targetWord = userInput.Substring(firstPoint, secondPoint);
-                    firstPoint = indexTracker + 1;
-                    modifiedWord = Translator(targetWord);
-
-                    translatedWords.Add(modifiedWord + " ");
-                }
-                else if (indexTracker == userInput.Length - 1)
-                {
-                    secondPoint = indexTracker - firstPoint;
-                    targetWord = userInput.Substring(firstPoint, secondPoint + 1);
-                    modifiedWord = Translator(targetWord);
-
-                    translatedWords.Add(modifiedWord + " ");
-                }
-
-
-
-                indexTracker++;
+                modifiedSentence = modifiedSentence + Translator(word) + " ";
             }
 
-            string sentence = String.Join(string.Empty, translatedWords.ToArray());
+            modifiedSentence = modifiedSentence.Substring(0, 1).ToUpper() + modifiedSentence.Substring(1, modifiedSentence.Length - 2) + ".";
 
-            Console.WriteLine(sentence);
+            Console.WriteLine(modifiedSentence);
 
             Console.ReadLine();
         }
@@ -78,6 +38,7 @@ namespace English_To_Pig_Latin_Translator
                 return word.Substring(1, 1) + word.Substring(2, word.Length - 2) + word.Substring(0, 1) + "ay";
             }
         }
+
 
     }
 }
