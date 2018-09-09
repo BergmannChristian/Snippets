@@ -10,7 +10,7 @@ namespace English_To_Pig_Latin_Translator
     {
         static void Main(string[] args)
         {
-            string userInput = "a fantastic sentence a truly wonderful statement";
+            string userInput = Console.ReadLine().ToLower();
 
             string[] separatedInput = userInput.Split(' ');
             string modifiedSentence = "";

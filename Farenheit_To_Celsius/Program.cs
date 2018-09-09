@@ -10,25 +10,21 @@ namespace Farenheit_To_Celsius
     {
         static void Main(string[] args)
         {
-            ///Farenheit to Celsius Converter
 
             //Declare variables
             int farenheit;
             double celsius;
 
-            //Accept user input
+            //Store the user input
             farenheit = Int32.Parse(Console.ReadLine());
 
-            //Perform farenheit to celsius conversion.
-            celsius = 5 * ( (double) farenheit - 32) / 9;
-            //Round result to nearest tenth.
-            celsius = Math.Round(celsius, 1);
+            //Convert the user input using the farenheit celsius conversion formula.
+            celsius = Math.Round(5 * ( (double) farenheit - 32) / 9, 1);
 
-            //Display Results
-            Console.WriteLine("The temperature is {0}f ({1}c)", farenheit, celsius);
+            //Print result to console.
+            Console.WriteLine("{0} Farenheit = {1} Celsius", farenheit, celsius);
             Console.ReadLine();
 
-            ///End Farenheit to Celsius Converter
         }
     }
 }
