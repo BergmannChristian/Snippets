@@ -61,7 +61,7 @@ namespace Misc_Calculations
 
                 Console.WriteLine("\nExplanation " +
                     "\n{0} " +
-                    "\n{1}\u00b2 - {2}\u00b2 = a" +
+                    "\n{1}\u00b2 - {2}\u00b2 = b" +
                     "\n{3} - {4} = \u221A{5}" +
                     "\nb = {6}", LINE, c, a, c * c, a * a, result*result, result);
             }
@@ -71,7 +71,7 @@ namespace Misc_Calculations
 
                 Console.WriteLine("\nExplanation " +
                     "\n{0} " +
-                    "\n{1}\u00b2 + {2}\u00b2 = a" +
+                    "\n{1}\u00b2 + {2}\u00b2 = c" +
                     "\n{3} + {4} = \u221A{5}" +
                     "\nc = {6}", LINE, a, b, a * a, b * b, result*result, result);
             }
