@@ -22,81 +22,64 @@ namespace Misc_Calculations
 
             if (mathMode == 1)
             {
+                Console.Clear();
                 PythagoreanTheorem();
             }
+
             Console.ReadLine();
+
         }
 
         static public void PythagoreanTheorem()
         {
-            char mode;
-            double a, b, c;
+         
+            double a, b, c, result;
 
-            Console.WriteLine("Are we solving for a, b, or c?");
+            Console.WriteLine("Please enter values for A\u00b2, B\u00b2, and C\u00b2.\nThe number 0.0 should be entered for the side that we are solving for.\n(e.x. a = 6, b = 4, c = 0.0)");
 
-            mode = char.Parse(Console.ReadLine());
+            //Record values for each variable.
+            Console.WriteLine("\nA\u00b2=");
+            a = double.Parse(Console.ReadLine());
+            Console.WriteLine("B\u00b2=");
+            b = double.Parse(Console.ReadLine());
+            Console.WriteLine("C\u00b2=");
+            c = double.Parse(Console.ReadLine());
 
-            if (mode == 'a')
+            if (a == 0.0)
             {
-                Console.WriteLine("\nFormula: c\u00b2 - b\u00b2 = a\u00b2");
+                result = Math.Round(Math.Sqrt(((c * c) - (b * b))),1);
 
-                Console.WriteLine("c =");
-                c = Int32.Parse(Console.ReadLine());
-
-                Console.WriteLine("b =");
-                b = Int32.Parse(Console.ReadLine());
-
-                a = Math.Round(Math.Sqrt(((c * c) - (b * b))), 2);
-
-                Console.WriteLine("a = {0}", a);
+                Console.WriteLine("\nExplanation " +
+                    "\n{0} " +
+                    "\n{1}\u00b2 - {2}\u00b2 = a" +
+                    "\n{3} - {4} = \u221A{5}" +
+                    "\na = {6}", LINE, c, b, c * c, b * b, result*result, result);
             }
-            else if (mode == 'b')
+            else if (b == 0.0)
             {
-                Console.WriteLine("\nFormula: c\u00b2 - a\u00b2 = b\u00b2");
+                result = Math.Round(Math.Sqrt(((c * c) - (a * a))),1);
 
-                Console.WriteLine("c =");
-                c = Int32.Parse(Console.ReadLine());
-
-                Console.WriteLine("a =");
-                a = Int32.Parse(Console.ReadLine());
-
-                b = Math.Round(Math.Sqrt(((c * c) - (a * a))), 2);
-
-                Console.WriteLine("b = {0}", b);
+                Console.WriteLine("\nExplanation " +
+                    "\n{0} " +
+                    "\n{1}\u00b2 - {2}\u00b2 = a" +
+                    "\n{3} - {4} = \u221A{5}" +
+                    "\nb = {6}", LINE, c, a, c * c, a * a, result*result, result);
             }
-            else if (mode == 'c')
+            else if (c == 0.0)
             {
-                Console.WriteLine("\nFormula: a\u00b2 + b\u00b2 = c\u00b2");
+                result = Math.Round(Math.Sqrt(((a * a) + (b * b))),1);
 
-                Console.WriteLine("a =");
-                a = Int32.Parse(Console.ReadLine());
-
-                Console.WriteLine("b =");
-                b = Int32.Parse(Console.ReadLine());
-
-                c = Math.Round(Math.Sqrt(((a * a) + (b * b))), 2);
-
-                Console.WriteLine("c = {0}", c);
+                Console.WriteLine("\nExplanation " +
+                    "\n{0} " +
+                    "\n{1}\u00b2 + {2}\u00b2 = a" +
+                    "\n{3} + {4} = \u221A{5}" +
+                    "\nc = {6}", LINE, a, b, a * a, b * b, result*result, result);
+            }
+            else
+            {
+                Console.WriteLine("ERROR");
             }
 
-
-            /*
-            int a, b;
-            double c;
-
-            Console.WriteLine("\nFormula: a\u00b2 + b\u00b2 = c\u00b2");
-
-            Console.WriteLine("Value for a");
-            a = Int32.Parse(Console.ReadLine());
-
-            Console.WriteLine("Value for b");
-            b = Int32.Parse(Console.ReadLine());
-
-            c = Math.Round(Math.Sqrt(((a * a) + (b * b))), 2);
-
-            Console.WriteLine(c);
-            Console.ReadLine();
-            */
         }
 
     }
